@@ -4,9 +4,11 @@ import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
 import tseslint from 'typescript-eslint'
 import { defineConfig, globalIgnores } from 'eslint/config'
+import i18next from 'eslint-plugin-i18next';
 
 export default defineConfig([
     globalIgnores(['dist']),
+    i18next.configs['flat/recommended'],
     {
         files: ['**/*.{ts,tsx}'],
         extends: [

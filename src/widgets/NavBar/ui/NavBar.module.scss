@@ -1,18 +1,14 @@
 .navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
-  width: 100%;
-  height: var(--navbar-height);
-  background-color: var(--bg-color);
-}
-
-.logo {
-
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    width: 100%;
+    height: var(--navbar-height);
+    background-color: var(--bg-color);
 }
 
 .links {
-  display: flex;
-  gap: 15px;
+    display: flex;
+    gap: 15px;
 }
