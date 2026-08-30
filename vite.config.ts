@@ -3,12 +3,24 @@ import { defineConfig } from 'vite'
 import path from 'path';
 import { dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import svgr from "vite-plugin-svgr";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 // https://vite.dev/config/
 export default defineConfig({
-    plugins: [react()],
+    plugins: [react(), svgr(
+    //     {
+        //     svgrOptions: {
+        //         // Автоматически заменяет fill и stroke на currentColor
+        //         replaceAttrValues: {
+        //             '#000': 'currentColor',
+        //             '#000000': 'currentColor',
+        //             'black': 'currentColor',
+        //         },
+        //     },
+        // }
+    ),],
     resolve: {
         alias: {
             // Алиасы сформированы заранее по FSD

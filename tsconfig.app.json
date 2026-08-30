@@ -13,7 +13,7 @@
     "allowArbitraryExtensions": true,
     "skipLibCheck": true,
     // Настройка алиасов совместно с vite.config (FSD)
-    "base": ".",
+//    "base": ".",
     "paths": {
       "@/*": ["./src/*"]
 

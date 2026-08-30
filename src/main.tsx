@@ -4,6 +4,8 @@ import App from './app/App.tsx'
 import { ThemeProvider } from "./app/providers/ThemeProvider";
 import { BrowserRouter } from "react-router";
 
+import "./shared/config/i18n/i18n.ts"
+
 createRoot(document.getElementById('root')!)
     .render(
         <StrictMode>
