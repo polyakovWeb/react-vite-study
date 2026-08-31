@@ -6,10 +6,12 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "type:check": "tsc -b",
     "lint": "eslint .",
     "stylelint": "npx stylelint \"**/*.scss\"",
     "stylelint:fix": "npx stylelint \"**/*.scss\" --fix",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "unit": "vitest"
   },
   "dependencies": {
     "i18next": "^26.4.0",
@@ -40,6 +42,7 @@
     "typescript": "~6.0.2",
     "typescript-eslint": "^8.67.0",
     "vite": "^8.2.2",
-    "vite-plugin-svgr": "^5.2.0"
+    "vite-plugin-svgr": "^5.2.0",
+    "vitest": "^4.1.11"
   }
 }
