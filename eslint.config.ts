@@ -20,5 +20,13 @@ export default defineConfig([
         languageOptions: {
             globals: globals.browser,
         },
+        rules: {},
+    },
+    // Отключить перевод в тестах
+    {
+        files: ['**/*.test.{ts,tsx}'],
+        rules: {
+            'i18next/no-literal-string': 'off',
+        },
     },
 ])

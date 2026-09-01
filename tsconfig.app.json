@@ -8,12 +8,13 @@
     ],
     "module": "esnext",
     "types": [
-      "vite/client"
+      "vite/client",
+      "@testing-library/jest-dom/vitest"
     ],
     "allowArbitraryExtensions": true,
     "skipLibCheck": true,
     // Настройка алиасов совместно с vite.config (FSD)
-//    "base": ".",
+    //    "base": ".",
     "paths": {
       "@/*": ["./src/*"]
 

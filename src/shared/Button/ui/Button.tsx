@@ -6,14 +6,14 @@ import type { FC, HTMLAttributes, ReactNode } from "react";
 interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
     className?: string
     children?: ReactNode
-    theme: ButtonThemeT
+    theme?: ButtonThemeT
 }
 
 export const Button: FC<ButtonProps> = (props) => {
     const {className, children, theme, ...otherProps} = props
 
     return (
-        <button type='button' className={classNames(cls.Button, {}, [className, cls[theme]])} {...otherProps}>
+        <button type='button' className={classNames(cls.Button, {}, [className, theme && cls[theme]])} {...otherProps}>
             {children}
         </button>
     )
