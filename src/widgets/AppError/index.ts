@@ -1,0 +1,1 @@
+export { AppError, type FallbackProps } from "./ui/AppError"

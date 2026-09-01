@@ -5,6 +5,8 @@ import { AppRouter } from "@/app/providers/router";
 import { NavBar } from "@/widgets/NavBar";
 import { SideBar } from "@/widgets/SideBar";
 import { Suspense } from "react";
+import { LoaderWidget } from "@/widgets/LoaderWidget";
+import ErrorBoundary from "@/app/providers/ErrorBoundary";
 
 const App = () => {
     const {theme} = useTheme();
@@ -12,11 +14,15 @@ const App = () => {
     return (
         <div className={classNames('app', {}, [theme])}>
             {/*i18n suspense*/}
-            <Suspense fallback={'loading...'}>
+            <Suspense fallback={<LoaderWidget/>}>
                 <NavBar/>
                 <div className='content-page'>
                     <SideBar/>
-                    <AppRouter/>
+                    {/* to simplify, all routes are wrapped with default fallback
+                     instead of each component with custom fb */}
+                    <ErrorBoundary>
+                        <AppRouter/>
+                    </ErrorBoundary>
                 </div>
             </Suspense>
         </div>
