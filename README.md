@@ -1,4 +1,4 @@
-# React 19 Enterprise Starter
+# React 19 Enterprise (Blog)
 
 > Production-ready архитектурный шаблон (boilerplate) на React 19 с акцентом на масштабируемость и надежность.
 
