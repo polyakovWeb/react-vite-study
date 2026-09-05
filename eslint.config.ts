@@ -1,6 +1,5 @@
 // For more info, see https://github.com/storybookjs/eslint-plugin-storybook#configuration-flat-config-format
 import storybook from "eslint-plugin-storybook";
-
 import js from '@eslint/js'
 import globals from 'globals'
 import reactHooks from 'eslint-plugin-react-hooks'
@@ -21,10 +20,13 @@ export default defineConfig([globalIgnores(['dist']), i18next.configs['flat/reco
         globals: globals.browser,
     },
     rules: {},
-}, // Отключить перевод в тестах
-{
-    files: ['**/*.test.{ts,tsx}'],
-    rules: {
-        'i18next/no-literal-string': 'off',
+    ...storybook.configs["flat/recommended"]
+},
+    // Отключить перевод в тестах
+    {
+        files: ['**/*.test.{ts,tsx}'],
+        rules: {
+            'i18next/no-literal-string': 'off',
+        },
     },
-}, ...storybook.configs["flat/recommended"]])
+])
