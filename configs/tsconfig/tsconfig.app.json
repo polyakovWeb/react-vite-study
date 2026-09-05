@@ -9,23 +9,17 @@
     "module": "esnext",
     "types": [
       "vite/client",
-      "@testing-library/jest-dom/vitest"
+      "@testing-library/jest-dom/vitest",
+      "@vitest/browser-playwright"
     ],
     "allowArbitraryExtensions": true,
     "skipLibCheck": true,
-    // Настройка алиасов совместно с vite.config (FSD)
-    //    "base": ".",
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
-
-      //      overhead
-      //      "@app/*": ["./src/app/*"],
-      //      "@pages/*": ["./src/pages/*"],
-      //      "@widgets/*": ["./src/widgets/*"],
-      //      "@features/*": ["./src/features/*"],
-      //      "@entities/*": ["./src/entities/*"],
-      //      "@shared/*": ["./src/shared/*"]
+      "@/*": ["../../src/*"],
+      "@configs/*": ["../../configs/*"]
     },
+    //    "composite": true,
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
@@ -40,6 +34,8 @@
     "noFallthroughCasesInSwitch": true
   },
   "include": [
-    "src"
+    "../../src",
+    "../../configs/storybook/**/*.ts",
+    "../../configs/storybook/**/*.tsx"
   ]
 }

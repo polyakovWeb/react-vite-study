@@ -13,10 +13,10 @@ export const AppError = ({error, resetError}: FallbackProps) => {
     return (
         <div className={classNames(cls.AppError)}>
             <h1>{t('Произошла ошибка')}</h1>
-            <p className={classNames(cls.message)}>{error.message} </p>
+            {error?.message && <p className={classNames(cls.message)}>{error.message} </p>}
             <button
                 onClick={resetError}
-             className={classNames(cls.button)}>
+                className={classNames(cls.button)}>
                 {t('Попробовать снова')}
             </button>
         </div>
